@@ -1,0 +1,46 @@
+body{
+  text-align: center;
+  color: white;
+  border: 60px solid #54C5B6;
+  border-top: 0px;
+  background-color: #011627;
+  margin: 0px;
+  margin-top:20px;
+}
+
+h1{
+  font-family: monospace;
+  margin: auto;
+}
+
+h2{
+  font-family: monospace;
+  margin-top: 30px;
+}
+
+input{
+  font-size: 20px;
+}
+
+label{
+  font-size: 20px;
+}
+
+.content{
+  font-family: monospace;
+  padding-top: 5%;
+  padding-left: 20%;
+  padding-right: 20%;
+  font-size: 1.2em;
+}
+
+#sub{
+  background-color: orange;
+  font-size: 20px;
+
+  border-radius: 10px;
+  height: 80px;
+  width: 150px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
