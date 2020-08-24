@@ -9,9 +9,11 @@ table{
     height: 450px;
 }
 
-/* td{
-    border: 2px solid black;
-} */
+#refresh{
+    margin: auto;
+    display:none;
+    margin-bottom: 20px;
+}
 
 button{
 background-color: #808080;

@@ -1,6 +1,6 @@
 var players = $('.playerInfo');
 var color = {
-    'background-color' : 'blue'
+    'background-color' : '#5696FC'
 }
 var flag = true;
 
@@ -32,13 +32,13 @@ players.css(color);
 
 function playerChange(){
     if(flag){
-        color['background-color'] = 'red';
+        color['background-color'] = '#EE4749';
         players.text(p2 + " it is your turn");
         players.css(color);
         flag = false;
     }
     else{
-        color['background-color'] = 'blue';
+        color['background-color'] = '#5696FC';
         players.text(p1 + " it is your turn");
         players.css(color);
         flag = true;
@@ -187,17 +187,21 @@ function displayFinal(){
         color: 'white'
     };
     if(p == 1)
-        obj['background-color'] = 'blue';
+        obj['background-color'] = '#5696FC';
     else
-        obj['background-color'] = 'red';
+        obj['background-color'] = '#EE4749';
 
 
     $('.playerInfo').fadeOut('fast');
     $('.won').text("Player " + p + " has WON").css(obj);
     // $('.won').css('background', obj);
-
+    $('#refresh').css('display','block');
 
 }
+
+$('#refresh').on('click', function(){
+    location.reload();
+})
 
 
 for(var j = 0; j < arrId.length; j++){
