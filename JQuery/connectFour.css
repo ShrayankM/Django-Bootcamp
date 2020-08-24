@@ -1,0 +1,24 @@
+body{
+    font-size: 16px;
+    text-align: center;
+}
+
+table{
+    margin: auto;
+    width: 55%;
+    height: 450px;
+}
+
+/* td{
+    border: 2px solid black;
+} */
+
+button{
+background-color: #808080;
+ border: 5px solid black;
+ color: white;
+ padding: 45px;
+ text-align: center;
+ margin: 2px 2px;
+ border-radius: 50%;
+}
