@@ -1,0 +1,12 @@
+table, tr, td{
+    margin: auto;
+    width: 30%;
+    height: 100px;
+    border:2px solid black;
+}
+
+td{
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+}
