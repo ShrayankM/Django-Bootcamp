@@ -182,9 +182,9 @@ var p;
 
 function displayFinal(){
     var obj = {
-        fontSize: '20px',
+        fontSize: '35px',
         border: '2px solid black',
-        color: 'white'
+        color: 'white',
     };
     if(p == 1)
         obj['background-color'] = '#5696FC';
@@ -196,6 +196,10 @@ function displayFinal(){
     $('.won').text("Player " + p + " has WON").css(obj);
     // $('.won').css('background', obj);
     $('#refresh').css('display','block');
+    var buttons = $('#tab button')
+    for(var j = 0; j < buttons.length; j++){
+        buttons[j].disabled = !buttons[j].disabled;
+    }
 
 }
 
