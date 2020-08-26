@@ -80,6 +80,10 @@ _arr.length                                        //length of array
 var p = _arr.pop()                                 //remove last element from array
 _arr.push(8)                                       //push element at back
 
+for(var i = 0; i < _arr.lenght; i++){
+    console.log(_arr[i]);
+}
+
 for (i in _arr){
     console.log(_arr[i]);
 }
