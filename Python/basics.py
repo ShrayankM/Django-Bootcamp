@@ -108,3 +108,5 @@ print(list(myF))
 myL = [1, 2, 3, 4]
 myL.pop(0)
 print(myL)
+
+myList = [1, 2]
