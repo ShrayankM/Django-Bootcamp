@@ -1,4 +1,4 @@
-"""L2P URL Configuration
+"""basicforms URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -15,12 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.urls import include
-from myuser import views
+from basicapp import views
 
 urlpatterns = [
     path('', views.index, name = 'index'),
-    path('help/', include('myuser.urls')),
     path('admin/', admin.site.urls),
-    path('addUser/', views.add_user, name = 'adduser')
+    path('formPage/', views.form_name_view, name = 'form_name')
 ]

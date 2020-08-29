@@ -1,5 +1,4 @@
 <!doctype html>
-{% load static %}
 <html lang="en">
 
 <head>
@@ -7,14 +6,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <title> Index Page </title>
+    <title> Add User </title>
 </head>
 
 <body>
     <div class="container">
-        <h1> Welcome to the home page !!!</h1>
-        <h2> Go to /addUser to fill the form </h2>
-        <h2> Go to /help to seee all user info </h2>
+        <form method="POST">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="submit" class = "btn btn-primary" value="Submit">
+        </form>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
