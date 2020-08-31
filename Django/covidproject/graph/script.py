@@ -38,7 +38,7 @@ def create_pie_chart(df, dir):
             radius = 1.3, shadow = True, startangle = 180,
             colors = my_colors, wedgeprops = dict(width = 0.4), pctdistance = 0.5);
     path = os.path.join(dir, 'images')
-    plt.savefig(os.path.join(path, 'pie.png'))
+    plt.savefig(os.path.join(path, 'pie.jpg'), orientation = {'portrait'}, bbox_inches = 'tight')
 
 def create_line_chart(df, dir):
     df_ = df.copy(deep = True)
@@ -51,11 +51,11 @@ def create_line_chart(df, dir):
     fig = plt.gcf()
     fig.set_size_inches(15, 6)
     svm = sns.lineplot('date', 'Cases', data = df_,
-                 hue = 'status',
+                 hue = 'status', ci = 95,
                  palette = {'Confirmed':my_colors[0], 'Recovered':my_colors[1], 'Deceased':my_colors[2]});
     path = os.path.join(dir, 'images')
     figure = svm.get_figure()
-    figure.savefig(os.path.join(path, 'area.png'))
+    figure.savefig(os.path.join(path, 'area.jpg'), bbox_inches = 'tight')
     plt.xticks(rotation = 45);
 
 def create_dataset(df):
@@ -63,6 +63,7 @@ def create_dataset(df):
     df_bar.set_index('status', inplace = True)
     df_bar.drop('date', axis = 1, inplace = True)
     df_bar.drop('tt', axis = 1, inplace = True)
+    df_bar.drop('un', axis = 1, inplace = True)
     df_bar = df_bar.apply(pd.to_numeric)
     df_bar = df_bar.T
     return df_bar
@@ -115,3 +116,5 @@ def start():
     df_bar = create_dataset(df)
     df_MC, df_MR, df_MD = overall_info(df)
     return df_bar, df_MC, df_MR, df_MD
+
+# start()

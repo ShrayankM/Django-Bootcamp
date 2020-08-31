@@ -1,0 +1,13 @@
+<!doctype html>
+{% extends 'basic_app/base.html'%}
+    {% load static %}
+    {% block body_block %}
+        <link rel="stylesheet" href="{% static "css/relative.css" %}">
+        <title> Relative Page </title>
+        <div class="container">
+            <h1> Welcome of Relative URL'S </h1>
+            <a href="{% url 'basic_app:other' %}"> Other page </a>
+            <a href="{% url 'admin:index' %}"> Admin Page </a>
+            <a href="{% url 'index' %}"> Index Page </a>
+        </div>
+    {% endblock %}
