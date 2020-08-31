@@ -8,13 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static "css/temp.css" %}">
-    <title>Hello, world!</title>
+    <title> Coronavirus Statistics India 2020 </title>
 </head>
 
 <body>
 
     <nav class="head nav justify-content-center col-md-12 col-lg-12">
-        <h1> Coronavirus Statistics India 2020 </h1>
+        <div class="container">
+            <h1> Coronavirus Statistics India 2020 </h1>
+        </div>
     </nav>
 
     <div class="container">
@@ -33,7 +35,7 @@
                         <table class="tab table table-hover table-borderless table-responsive-md">
                             <thead>
                                 <tr>
-                                    <th scope="col"> </th>
+                                    <!-- <th scope="col"> </th> -->
                                     <th scope="col"> Confirmed </th>
                                     <th scope="col"> Recovered </th>
                                     <th scope="col"> Deceased </th>
@@ -41,13 +43,13 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row"> Total </th>
+                                    <!-- <th scope="row"> Total </th> -->
                                     <td style="color:#DF412F; font-weight:bold"> {{ overall_list.0 }} </td>
                                     <td style="color:#599C29; font-weight:bold"> {{ overall_list.1 }} </td>
                                     <td style = "font-weight:bold"> {{ overall_list.2 }} </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row"> Today </th>
+                                    <!-- <th scope="row"> Today </th> -->
                                     <td style="color:#DF412F; font-weight:bold"> {{ today_t.0 }} &#8593; </td>
                                     <td style="color:#599C29; font-weight:bold"> {{ today_t.1 }} &#8593; </td>
                                     <td style = "font-weight:bold"> {{ today_t.2 }} &#8593; </td>
@@ -86,7 +88,7 @@
                     <table class="tab table table-hover table-borderless table-responsive-md">
                         <thead>
                             <tr>
-                                <th scope="col"> </th>
+                                <!-- <th scope="col"> </th> -->
                                 <th scope="col"> Confirmed </th>
                                 <th scope="col"> Recovered </th>
                                 <th scope="col"> Deceased </th>
@@ -94,13 +96,13 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row"> Total </th>
+                                <!-- <th scope="row"> Total </th> -->
                                 <td id="tc"> </td>
                                 <td id="tr"> </td>
                                 <td id="td"> </td>
                             </tr>
                             <tr>
-                                <th scope="row"> Today </th>
+                                <!-- <th scope="row"> Today </th> -->
                                 <td id="confirm"> &#8593; </td>
                                 <td id="recover"> &#8593; </td>
                                 <td id="decease"> &#8593; </td>
